@@ -12,7 +12,7 @@ The implementation of paper : RTCoInfer: Real-time Edge-Cloud Collaborative CNN 
 modify the item "dataset_dir:" to your dataset 
 
 ```
-*Train the model without compression and get a initiation.pt
+*Train the model without compression and get a initialization_model.pt
 ```
 python train_only_one.py app:apps/train_only_one.yml
 
