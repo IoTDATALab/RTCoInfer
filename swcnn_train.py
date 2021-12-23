@@ -389,7 +389,7 @@ def run_one_epoch(
             with torch.no_grad():
                 output_teach = model_wrapper_teach(input)
                 soft_target=torch.nn.functional.softmax(output_teach, dim=1)
-            for _width_mult, _quantbit in FLAGS.test_compression_setups_intraining:
+            for _width_mult, _quantbit in train_tmp:
             # for _width_mult, _quantbit in train_tmp:
                 model.apply(lambda m: setattr(m, 'width_mult', _width_mult))
                 model.apply(lambda m: setattr(m, 'quant_bits', _quantbit))
