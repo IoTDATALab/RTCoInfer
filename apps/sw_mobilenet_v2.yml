@@ -67,10 +67,6 @@ initialization_model: ./logs/initialization_model.pt
 
 
 ### test the SW-CNN
-<<<<<<< HEAD
-test_only: True
-=======
-test_only: False
->>>>>>> add and modify
+test_only: false
 test_model: ./logs/best_model.pt
 

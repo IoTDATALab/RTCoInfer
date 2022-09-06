@@ -19,7 +19,7 @@ import torchvision.transforms as transforms
 import torchvision.datasets as datasets
 import torchvision.models as models
 import models.imagenet as customized_models
-
+# import models.imagenet_zquant as customized_models
 from utils import Logger, AverageMeter, accuracy
 
 # Parse arguments
