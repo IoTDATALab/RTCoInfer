@@ -1,0 +1,49 @@
+batch_size: 1
+bn_cal_batch_num: 5
+calibrate_bn: false
+cumulative_bn_stats: false
+data_loader: imagenet1k_basic
+data_loader_workers: 62
+data_transforms: imagenet1k_mobile
+dataset: imagenet1k
+dataset_dir: /home/zzh/2021TMC/stanford_cars/
+gpu_type: nvidia-tesla-p100
+image_size: 224
+log_dir: logs/
+lr: 0.25
+lr_scheduler: linear_decaying
+memory_per_job: 380
+model: models.mobilenet
+momentum: 0.9
+multistep_lr_gamma: 0.1
+multistep_lr_milestones:
+- 30
+- 60
+- 90
+nesterov: true
+num_classes: 1000
+num_cpus_per_job: 63
+num_epochs: 750
+num_gpus_per_job: 1
+num_sample_training: 4
+optimizer: sgd
+pretrained: logs/best_model.pt
+profiling:
+- gpu
+random_seed: 1995
+reset_parameters: true
+resume: ''
+slimmable_training: true
+soft_target: false
+test_only: true
+topk:
+- 1
+- 5
+universally_slimmable_training: true
+weight_decay: 0.0001
+width_mult: 1.0
+width_mult_list:
+- 1.0
+width_mult_range:
+- 1.0
+z_entropy: 0.335

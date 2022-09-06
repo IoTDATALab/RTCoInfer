@@ -1,0 +1,70 @@
+### machine info
+num_gpus_per_job: 4  # number of gpus each job need
+num_cpus_per_job: 63  # number of cpus each job need
+memory_per_job: 380  # memory requirement each job need
+gpu_type: "nvidia-tesla-v100"
+num_gpus_per_job: 1
+
+### CNN model
+model: models.mobilevit
+log_dir: logs/
+
+### data
+dataset: imagenet1k
+data_transforms: imagenet1k_mobile
+data_loader: imagenet1k_basic
+dataset_dir: /home/zzh/2021TMC/stanford_cars/
+# dataset_dir: /home/zzh/ImageNet-Traffic/
+data_loader_workers: 62
+
+###Clustering
+eps: 0.00001
+
+### info
+num_classes: 196
+image_size: 256
+topk: [1, 5]
+num_epochs: 500
+
+### optimizer
+optimizer: sgd
+momentum: 0.9
+weight_decay: 0.0001
+nesterov: True
+random_seed: 1995
+
+### lr,batchsize,and epoch
+# lr: 0.1
+# lr_scheduler: multistep
+# multistep_lr_milestones: [30, 60, 90]
+# multistep_lr_gamma: 0.1
+lr: 0.025
+lr_scheduler: linear_decaying
+batch_size: 128
+num_epochs: 500
+
+### pretrain, resume, test_only
+pretrained: ''
+resume: ''
+test_only: False
+reset_parameters: True
+
+### The compression setup space
+width_mult: 1.0
+quant_list: [65535,255,15,3,1]
+num_list: [0.0625, 0.125, 0.25, 0.5, 1.0]
+test_compression_setups_intraining: [[1.0,255],[0.0625,1]]
+
+### Clustering method divides the compression setup space into 3 cluster
+cluster_set: [[[0.125, 3], [0.25, 255], [0.25, 3], [1.0, 15], [0.25, 65535], [0.125, 15], [0.0625, 65535], [0.125, 65535]], [[0.5, 15], [0.5, 1], [1.0, 3], [0.25, 1], [0.125, 1], [0.25, 15], [1.0, 65535], [0.0625, 1]], [[0.0625, 255], [0.125, 255], [0.5, 3], [0.0625, 3], [1.0, 255], [1.0, 1], [0.5, 65535], [0.5, 255], [0.0625, 15]]]
+# [[[0.0625, 255]], [[0.0625, 15], [0.0625, 3], [0.0625, 1], [0.125, 255], [0.125, 15], [0.125, 3], [0.125, 1], [0.25, 255], [0.25, 15], [0.25, 3], [0.25, 1], [0.5, 255], [0.5, 15], [0.5, 3], [0.5, 1], [1.0, 255], [1.0, 15], [1.0, 1]], [[1.0, 3]]]
+
+# [[[0.0625, 65535], [0.0625, 255], [0.0625, 15], [0.0625, 3], [0.0625, 1], [0.125, 65535], [0.125, 255], [0.125, 15], [0.125, 3], [0.125, 1], [0.25, 65535], [0.25, 255], [0.25, 15], [0.25, 3], [0.25, 1], [0.5, 65535], [0.5, 255], [0.5, 15], [0.5, 3], [0.5, 1], [1.0, 65535], [1.0, 255], [1.0, 15], [1.0, 3], [1.0, 1]]]
+### Initialization method gets the teach model
+initialization_model: ./logs/initialization_model.pt
+
+
+### test the SW-CNN
+test_only: True
+test_model: ./logs/best_model.pt
+
