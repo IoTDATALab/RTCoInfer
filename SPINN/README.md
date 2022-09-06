@@ -14,13 +14,15 @@ View the model structure
 ```
 
 ## Running the experiments
-Train the model
+* Train the model
 ```
 python train.py app:'./apps/train_us_mobilenet_v2_train_val.yml'
 ```
-Test the model
+* Test the model
 ```
 python entropy.py app:'./apps/test_us_mobilenet_v2_train_val.yml'
 ```
-you can change the entropy by param z_entropy in yml.
-
+* Change the test entropy
+```
+add the configuration "z_entropy: {number_you_want}" in test_us_mobilenet_v2_train_val.yml
+```
