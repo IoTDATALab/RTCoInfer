@@ -5,7 +5,7 @@ The implementation of paper : RTCoInfer: Real-time Edge-Cloud Collaborative CNN 
 ## Install
 Clone repo and install requirements.txt in a Python>=3.7.0 environment, including PyTorch>=1.3.1.
 ```
-git clone https://github.com/fairyw98/RTCoInfer.git  # clone
+git clone https://github.com/IoTDATALab/RTCoInfer.git  # clone
 cd RTCoInfer
 pip install -r requirements.txt  # install
 ```
