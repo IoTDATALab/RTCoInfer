@@ -17,12 +17,14 @@ View the model structure
 ![img2](../assets/img/mobilevit-fig.png)
 
 ## Running the experiments
-Train the model, change the test_only to false
+* Train the model
 ```
+add the configuration "test_only: False" in apps/sw_mobilevit.yml
 python swcnn_train.py app:apps/sw_mobilevit.yml
 ```
-Test the model, change the test_only to true
+* Test the model
 ```
+add the configuration "test_only: True" in apps/sw_mobilevit.yml
 python swcnn_train.py app:apps/sw_mobilevit.yml
 ```
 and you can see the results in test_database.txt
