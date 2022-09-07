@@ -2,6 +2,13 @@
 
 The implementation of paper : RTCoInfer: Real-time Edge-Cloud Collaborative CNN Inference for Stream Analytics on Ubiquitous Images. 
 
+We have conducted comparative experiments with some of the best engineering in the field.
+
+|RTCoInfer|CLIO|SPINN|MobileViT
+|:-:|:-:|:-:|:-:|
+|Real-time Edge-Cloud Collaborative CNN Inference for Stream Analytics on Ubiquitous Images. For more details, please click [RTCoInfer](https://github.com/IoTDATALab/RTCoInfer)|Enabling automatic compilation of deep learning pipelines across IoT and Cloud. For more details, please click [CLIO](https://github.com/IoTDATALab/RTCoInfer/tree/main/CLIO) |Synergistic progressive inference of neural networks over device and cloud. For more details, please click [SPINN](https://github.com/IoTDATALab/RTCoInfer/tree/main/SPINN) |Light-weight, General-purpose, and Mobile-friendly Vision Transformer. For more details, please click [MobileViT](https://github.com/IoTDATALab/RTCoInfer/tree/main/MobileViT)
+
+
 ## Install
 Clone repo and install requirements.txt in a Python>=3.7.0 environment, including PyTorch>=1.3.1.
 ```
@@ -14,15 +21,13 @@ pip install -r requirements.txt  # install
 * You may follow the data preparation guide [here](https://ai.stanford.edu/~jkrause/cars/car_dataset.html).
 
 ## Running the experiments
-*modify the configuration files in apps
+* modify the configuration files in apps
 ```
 modify the item "dataset_dir:" to your dataset 
-
 ```
-*Train the model without compression and get a initialization_model.pt
+* Train the model without compression and get a initialization_model.pt
 ```
 python train_only_one.py app:apps/train_only_one.yml
-
 ```
 * Get the clusters of compression setups by Clustering method.
 * Here exists an interactive interface after one epoch training. User can input the cluster number and eps for DBSCAN, and we have a guide for user to achieve the defined cluster number. 
