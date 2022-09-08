@@ -42,7 +42,7 @@ After putting them under the current folder, you can test the performance of the
 python exp_test.py
 ```
 
-## Parto Curve
+## Pareto Curve
 
 <img src = ../assets/img/parto.png width=60% />
 <!-- ![img5](../assets/img/parto.png) -->
