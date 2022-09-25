@@ -36,8 +36,10 @@ The performance of the switchable training weights is similar to the performance
 
 You can download the individually trained weights by clicking on [this link](https://drive.google.com/drive/folders/1OpOKmq9NlQYfVdYPRbQ2FX-XURvnZQCW?usp=sharing).
 
+<div align="center">
 <img src = ../assets/img/mobilevit-results.png width=60% />
 <!-- ![img4](../assets/img/mobilevit-results.png) -->
+</div>
 
 After putting them under the current folder, you can test the performance of the downloaded weights with the following command.
 ```
