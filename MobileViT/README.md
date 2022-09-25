@@ -2,8 +2,10 @@
 
 The implementation of paper : MobileViT: Light-weight, General-purpose, and Mobile-friendly Vision Transformer.
 
+<div align="center">
 
 ![img3](../assets/img/mobilevit.png)
+</div>
 
 ## Data Resource
 * Experiments are running on the dataset StanfordCars
@@ -44,5 +46,7 @@ python exp_test.py
 
 ## Pareto Curve
 
+<div align="center">
 <img src = ../assets/img/parto.png width=60% />
+</div>
 <!-- ![img5](../assets/img/parto.png) -->

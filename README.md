@@ -58,10 +58,13 @@ python swcnn_train.py app:apps/sw_mobilenet_v2.yml
 To demonstrate the effectiveness of Switchable CNN and analyze the contribution of each training technique (i.e., initialization(I), distillation(D) and clustering(C) techniques), we give the following ablation experiment results. Here, we take the accuracies of the models that are individually compressed under all compression setups as the baseline, and compare the accuracy losses of the SW-CNNs under the
 same compression setups, where the SW-CNNs are trained by different combinations of these three training techniques.
 Ideally, SW-CNN should achieve a similar accuracy with the individual compression method among all compression setups. Here, we represent the Initialization as “I”, the Distillation as“D”, and the Clustering as “C”. Then an SW-CNN trained with only Initialization can be represented as “I-noD-noC”. Finally, the accuracy losses of SW-CNNs compared with the individually compressed models are illustrated in the following figure, and details are given in the following table.
+<div align="center">
 
 <img src = assets/img/results.png width=60% />  
 
-<div class="center">
+</div>
+
+<div align="center">
 
 |Method|max|min|mean|
 |:---------:|:-----:|:-----:|:------:|
@@ -89,11 +92,15 @@ python exp_test.py
 ```
 Moreover, we also give the implementation of the state-of-the-art collaborative inference methods (i.e., SPINN and CLIO) for further comparison. 
 
+<div align="center">
+
 |CLIO|SPINN|
 |:-:|:-:|
 |Enabling automatic compilation of deep learning pipelines across IoT and Cloud. |Synergistic progressive inference of neural networks over device and cloud.
 Original paper [link](https://dl.acm.org/doi/pdf/10.1145/3372224.3419215). |Original paper [link](https://dl.acm.org/doi/pdf/10.1145/3372224.3419194). 
 The [implementation](https://github.com/IoTDATALab/RTCoInfer/tree/main/CLIO).  |The [implementation](https://github.com/IoTDATALab/RTCoInfer/tree/main/SPINN). |
+
+</div>
 
 ## More Implementations
 Besides the traditional CNN models like MobileNet and ResNet, the RTCoInfer can also be implemented on the Transform models containing CNN layers. Here, we take the MobileViT model (MobileViT: Light-weight, General-purpose, and Mobile-friendly Vision Transformer) as an example, and the implementation is available by clicking on this [link](https://github.com/IoTDATALab/RTCoInfer/tree/main/MobileViT). 
