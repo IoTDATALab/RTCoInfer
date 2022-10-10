@@ -364,16 +364,16 @@ def forward_loss(
         soft_criterion=None, return_soft_target=False, return_acc=False):
     """forward model and return loss"""
     output,output2 = model(input)
-    z_entropy=FLAGS.z_entropy
+    z_confidence_threshold=FLAGS.z_confidence_threshold
     # with open('res.txt','a+') as f:
-    #     f.write(f'{z_entropy}')
+    #     f.write(f'{z_confidence_threshold}')
     #     f.write('\n')
     # 0.335 #0-0.761 1-0.140 
     # 0.5 置信度阈值
     # 6993上云数量
     # 8041总共数量
     # 0.173平均精度
-    # 调整entropy，记录上传量和最后精度。
+    # 调整confidence_threshold，记录上传量和最后精度。
 
 	#0.5-6993/8041-0.173 
 	#0.25-4862/8041-0.323 
@@ -389,7 +389,7 @@ def forward_loss(
 
     z_softmax=torch.nn.functional.softmax(output2,dim=1)
     z_softmax=torch.max(z_softmax,1)[0]
-    if z_softmax<z_entropy:
+    if z_softmax<z_confidence_threshold:
         t0=time.time()
         output2=output
         z_num+=1
@@ -754,4 +754,5 @@ def main():
 
 
 if __name__ == "__main__":
+    os.environ["CUDA_VISIBLE_DEVICES"] = "1"
     main()

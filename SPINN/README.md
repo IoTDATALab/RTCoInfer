@@ -20,9 +20,9 @@ python train.py app:'./apps/train_us_mobilenet_v2_train_val.yml'
 ```
 * Test the model
 ```
-python entropy.py app:'./apps/test_us_mobilenet_v2_train_val.yml'
+python test.py app:'./apps/test_us_mobilenet_v2_train_val.yml'
 ```
-* Change the test entropy
+* Change the test confidence threshold
 ```
-add the configuration "z_entropy: {number_you_want}" in test_us_mobilenet_v2_train_val.yml
+add the configuration "z_confidence_threshold: {number_you_want}" in test_us_mobilenet_v2_train_val.yml
 ```

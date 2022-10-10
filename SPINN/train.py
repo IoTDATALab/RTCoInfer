@@ -573,8 +573,8 @@ def train_val_test():
     # model
     model, model_wrapper = get_model()
     print(model_wrapper)
-    with open('model.txt','a+') as f:
-        f.write(str(model_wrapper))
+    # with open('model.txt','a+') as f:
+    #     f.write(str(model_wrapper))
     if getattr(FLAGS, 'label_smoothing', 0):
         criterion = CrossEntropyLossSmooth(reduction='none')
     else:
@@ -744,4 +744,5 @@ def main():
 
 
 if __name__ == "__main__":
+    os.environ["CUDA_VISIBLE_DEVICES"] = "1"
     main()

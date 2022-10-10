@@ -23,11 +23,12 @@ multistep_lr_milestones:
 nesterov: true
 num_classes: 1000
 num_cpus_per_job: 63
-num_epochs: 750
+num_epochs: 500
 num_gpus_per_job: 1
 num_sample_training: 4
 optimizer: sgd
-pretrained: logs/best_model.pt
+# pretrained: logs/best_model.pt
+pretrained: False
 profiling:
 - gpu
 random_seed: 1995
@@ -46,4 +47,4 @@ width_mult_list:
 - 1.0
 width_mult_range:
 - 1.0
-z_entropy: 0.335
+z_confidence_threshold: 0.335
