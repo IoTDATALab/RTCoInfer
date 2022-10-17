@@ -18,7 +18,7 @@ View the model structure
 ```
 python train.py app:'./apps/train_us_mobilenet_v2_train_val.yml'
 ```
-* Test the model
+* Test the model with the user-defined confidence_threshold
 ```
 python test.py app:'./apps/test_us_mobilenet_v2_train_val.yml'
 ```
@@ -26,3 +26,31 @@ python test.py app:'./apps/test_us_mobilenet_v2_train_val.yml'
 ```
 add the configuration "z_confidence_threshold: {number_you_want}" in test_us_mobilenet_v2_train_val.yml
 ```
+The user-defined confidence_threshold controls the early-exit rate of the progressive model, which determines the uploading rate of input images and the average consumption of network bandwidth.
+The following table gives the impact of user-defined confidence_threshold.
+
+<div align="center">
+
+|Confidence-Threshold|Uploading-Rate|Average-Inference-Accuracy|
+|:---------:|:-----:|:-----:|
+|0.166|0.552|0.406|
+|0.171|0.552|0.406|
+|0.184|0.552|0.406|
+|0.193|0.552|0.406|
+|0.210|0.552|0.406|
+|0.229|0.552|0.406|
+|0.259|0.552|0.406|
+|0.302|0.552|0.406|
+|0.333|0.552|0.406|
+|0.372|0.552|0.406|
+|0.482|0.552|0.406|
+|0.652|0.552|0.406|
+</div>
+
+
+It is worth noting that SPINN can consume a similar local computation resource like RTCoInfer to compress the uploading data, and the comparison between SPINN and RTCoInfer under various accuracy loss constraints is illustrated in the following figure. The residual rate equals the average uploading data size over the original image size. 
+
+
+![img_spinn2](../assets/img/spinn_2.png)
+
+		
