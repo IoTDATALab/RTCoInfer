@@ -2,12 +2,12 @@
 
 The implementation of paper : SPINN: synergistic progressive inference of neural networks over device and cloud.
 
-<!-- <div align="center">
+<div align="center">
 
-<img src = ../assets/img/spinn.png width=60% />  
+<img src = ../assets/img/spinn.png width=70% />  
 
-</div> -->
-![img_spinn](../assets/img/spinn.png)
+</div>
+<!-- ![img_spinn](../assets/img/spinn.png) -->
 
 ## Data Resource
 * Experiments are running on the dataset StanfordCars
@@ -58,7 +58,7 @@ It is worth noting that SPINN can consume a similar local computation resource l
 
 <div align="center">
 
-<img src = ../assets/img/spinn_2.png width=60% />  
+<img src = ../assets/img/spinn_2.png width=50% />  
 
 </div>
 
