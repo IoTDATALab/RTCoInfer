@@ -5,7 +5,12 @@ Clio, a novel model compilation framework that provides a continuum of options f
 One of the key benefits of Clio is that it allows model compilation techniques to be used even for stringently resource-constrained IoT devices which may have orders of magnitude less resources than the original model requires. By fully utilizing available bandwidth for remote execution, Clio limits the portion of the original model that needs to be compiled to the resource-constrained device thereby reducing the extent of compression that is required. This has significant advantages from a deployment perspective --- rather than having to hand-tune a model for deployment, automatic model compilation allows us to easily deploy large models over resource-limited networks of devices.
 # Overview
 
-![Overview of Clio](https://user-images.githubusercontent.com/32029515/89115694-41d6de80-d459-11ea-94de-79e8be453800.png)
+<div align="center">
+
+<img src = https://user-images.githubusercontent.com/32029515/89115694-41d6de80-d459-11ea-94de-79e8be453800.png  width=100% />  
+
+</div>
+
 
 Clio is a model compilation technique that allows us to execute large state-of-art models over resource-constrained IoT networks while gracefully degrading performance in the face of uncertain wireless bandwidth. At the core of Clio is a joint IoT-cloud optimization technique for progressively transmitting intermediate results from a partitioned model in-order to deal with bandwidth variations.
 
@@ -42,7 +47,7 @@ It is worth noting that CLIO consumes a similar local computation resource like 
 
 <div align="center">
 
-<img src = ../assets/img/clio_2.png width=40% />  
+<img src = ../assets/img/clio_2.png width=50% />  
 
 </div>
 <!-- ![img_spinn2](../assets/img/clio_2.png) -->
