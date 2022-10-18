@@ -13,7 +13,7 @@ Clio is a model compilation technique that allows us to execute large state-of-a
 
 <div align="center">
 
-<img src = https://user-images.githubusercontent.com/32029515/89115447-45b53180-d456-11ea-88df-51312a8c6592.png width=60% />  
+<img src = https://user-images.githubusercontent.com/32029515/89115447-45b53180-d456-11ea-88df-51312a8c6592.png width=40% />  
 
 </div>
 <!-- ![Progressive Slicing Example](https://user-images.githubusercontent.com/32029515/89115447-45b53180-d456-11ea-88df-51312a8c6592.png) -->
@@ -42,7 +42,7 @@ It is worth noting that CLIO consumes a similar local computation resource like 
 
 <div align="center">
 
-<img src = ../assets/img/clio_2.png width=60% />  
+<img src = ../assets/img/clio_2.png width=40% />  
 
 </div>
 <!-- ![img_spinn2](../assets/img/clio_2.png) -->
