@@ -1,6 +1,12 @@
 # SPINN: synergistic progressive inference of neural networks over device and cloud
 
 The implementation of paper : SPINN: synergistic progressive inference of neural networks over device and cloud.
+
+<!-- <div align="center">
+
+<img src = ../assets/img/spinn.png width=60% />  
+
+</div> -->
 ![img_spinn](../assets/img/spinn.png)
 
 ## Data Resource
@@ -50,7 +56,13 @@ The following table gives the impact of user-defined confidence_threshold.
 
 It is worth noting that SPINN can consume a similar local computation resource like RTCoInfer to compress the uploading data, and the comparison between SPINN and RTCoInfer under various accuracy loss constraints is illustrated in the following figure. The residual rate equals the average uploading data size over the original image size. 
 
+<div align="center">
 
-![img_spinn2](../assets/img/spinn_2.png)
+<img src = ../assets/img/spinn_2.png width=60% />  
+
+</div>
+
+
+<!-- ![img_spinn2](../assets/img/spinn_2.png) -->
 
 		

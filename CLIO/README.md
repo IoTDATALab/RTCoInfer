@@ -10,7 +10,13 @@ One of the key benefits of Clio is that it allows model compilation techniques t
 Clio is a model compilation technique that allows us to execute large state-of-art models over resource-constrained IoT networks while gracefully degrading performance in the face of uncertain wireless bandwidth. At the core of Clio is a joint IoT-cloud optimization technique for progressively transmitting intermediate results from a partitioned model in-order to deal with bandwidth variations.
 
 ## Progressive Slicing
-![Progressive Slicing Example](https://user-images.githubusercontent.com/32029515/89115447-45b53180-d456-11ea-88df-51312a8c6592.png)
+
+<div align="center">
+
+<img src = https://user-images.githubusercontent.com/32029515/89115447-45b53180-d456-11ea-88df-51312a8c6592.png width=60% />  
+
+</div>
+<!-- ![Progressive Slicing Example](https://user-images.githubusercontent.com/32029515/89115447-45b53180-d456-11ea-88df-51312a8c6592.png) -->
 
 We illustrate progressive slicing with the example . Here, the IoT device executes the initial layers until layer 3, and the rest of the pipeline is executed at the cloud. In this example, the output of layer 3 is partitioned into three slices, and depending on the bandwidth, different number of slices are transmitted to the cloud. There are three corresponding versions of layers on the cloud to handle the three possible slices as input. During inference time, IoT devices will execute layers `1-3` locally and pass the intermediate result of layer `3` to radios for transmission. Due to network dynamics, radios will send as much as possible and the cloud will activate the corresponding path for the received progressively sliced intermediate results. 
 
@@ -34,7 +40,12 @@ The deployment of Clio is to deploy the partition models into IoT devices and Cl
 
 It is worth noting that CLIO consumes a similar local computation resource like RTCoInfer to compress the uploading data, and the comparison between CLIO and RTCoInfer under various accuracy loss constraints is illustrated in the following figure. The residual rate equals the average uploading data size over the original image size.
 
-![img_spinn2](../assets/img/clio_2.png)
+<div align="center">
+
+<img src = ../assets/img/clio_2.png width=60% />  
+
+</div>
+<!-- ![img_spinn2](../assets/img/clio_2.png) -->
 
 Obviously, RTCoInfer achieves a lower residual rate under the same accuracy loss constraint, thus RTCoInfer achieves larger throughputs with the same devices and network conditions.
 
