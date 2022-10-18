@@ -7,7 +7,7 @@ One of the key benefits of Clio is that it allows model compilation techniques t
 
 <div align="center">
 
-<img src = https://user-images.githubusercontent.com/32029515/89115694-41d6de80-d459-11ea-94de-79e8be453800.png  width=60% />  
+<img src = https://user-images.githubusercontent.com/32029515/89115694-41d6de80-d459-11ea-94de-79e8be453800.png  width=70% />  
 
 </div>
 
